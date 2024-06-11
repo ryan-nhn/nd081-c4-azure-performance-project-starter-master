@@ -21,14 +21,14 @@ storageType="Standard_LRS"
 # This command will not work for the Cloud Lab users. 
 # Cloud Lab users can comment this command and 
 # use the existing Resource group name, such as, resourceGroup="cloud-demo-153430" 
-echo "STEP 0 - Creating resource group $resourceGroup..."
+# echo "STEP 0 - Creating resource group $resourceGroup..."
 
-az group create \
---name $resourceGroup \
---location $location \
---verbose
+# az group create \
+# --name $resourceGroup \
+# --location $location \
+# --verbose
 
-echo "Resource group created: $resourceGroup"
+# echo "Resource group created: $resourceGroup"
 
 # Create Storage account
 echo "STEP 1 - Creating storage account $storageAccount"
@@ -60,6 +60,7 @@ az vmss create \
   --image $osType \
   --vm-sku $vmSize \
   --nsg $nsgName \
+  --orchestration-mode uniform \
   --subnet $subnetName \
   --vnet-name $vnetName \
   --backend-pool-name $bePoolName \
