@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables
-resourceGroup="acdnd-c4-project"
+resourceGroup="cloud-demo"
 clusterName="udacity-cluster"
 
 # Install aks cli
